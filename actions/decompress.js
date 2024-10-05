@@ -1,9 +1,9 @@
-import { createBrotliCompress } from 'zlib';
 import { createReadStream, createWriteStream } from 'fs';
+import { createBrotliDecompress } from 'zlib';
 import { pipeline } from 'stream/promises';
 
 export const decompress = async (pathToFile, pathToDestination) => {
-  const brotli = createBrotliCompress();
+  const brotli = createBrotliDecompress();
   const source = createReadStream(pathToFile);
   const destination = createWriteStream(pathToDestination);
 
