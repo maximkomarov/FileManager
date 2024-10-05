@@ -10,6 +10,7 @@ import { osAction } from './actions/os.js';
 import { hash } from './actions/hash.js';
 import { compress } from './actions/compress.js';
 import { decompress } from './actions/decompress.js';
+import { ls } from './actions/ls.js';
 
 export const commandsHandler = async (command) => {
   try {
@@ -21,7 +22,7 @@ export const commandsHandler = async (command) => {
         await cd(command[1]);
         break;
       case 'ls':
-        console.log('ls');
+        await ls();
         break;
       case 'cat':
         await cat(command[1]);
