@@ -10,6 +10,6 @@ export const decompress = async (pathToFile, pathToDestination) => {
   try {
     await pipeline(source, brotli, destination);
   } catch (err) {
-    console.error('An error occurred:', err);
+    console.error('Operation failed');
   }
 };
