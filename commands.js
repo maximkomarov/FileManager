@@ -8,7 +8,16 @@ export const COMMANDS = {
   cp: { numberOfParams: 2 },
   mv: { numberOfParams: 2 },
   rm: { numberOfParams: 1 },
-  os: { numberOfParams: 1 },
+  os: {
+    numberOfParams: 1,
+    validParams: [
+      '--EOL',
+      '--cpus',
+      '--homedir',
+      '--username',
+      '--architecture',
+    ],
+  },
   hash: { numberOfParams: 1 },
   compress: { numberOfParams: 2 },
   decompress: { numberOfParams: 2 },

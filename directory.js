@@ -10,6 +10,7 @@ export const directory = () => {
 export const osHomeDir = () => {
   return os.homedir().split(path.sep)[0].toLowerCase();
 };
+
 export const setDirectory = async (path) => {
   currentDirectory = path;
 };

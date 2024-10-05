@@ -19,5 +19,11 @@ const isValid = (commandArray) => {
   if (COMMANDS[commandName].numberOfParams + 1 !== commandArray.length) {
     return false;
   }
+  if (
+    COMMANDS[commandName].validParams &&
+    !COMMANDS[commandName].validParams.includes(commandArray[1])
+  ) {
+    return false;
+  }
   return true;
 };
