@@ -7,6 +7,9 @@ import { cp } from './actions/cp.js';
 import { rm } from './actions/rm.js';
 import { mv } from './actions/mv.js';
 import { osAction } from './actions/os.js';
+import { hash } from './actions/hash.js';
+import { compress } from './actions/compress.js';
+import { decompress } from './actions/decompress.js';
 
 export const commandsHandler = async (command) => {
   try {
@@ -42,13 +45,13 @@ export const commandsHandler = async (command) => {
         await osAction(command[1]);
         break;
       case 'hash':
-        console.log('hash');
+        await hash(command[1]);
         break;
       case 'compress':
-        console.log('compress');
+        compress(command[1], command[2]);
         break;
       case 'decompress':
-        console.log('decompress');
+        decompress(command[1], command[2]);
         break;
       case '.exit':
         process.exit(0);
