@@ -1,0 +1,16 @@
+export const COMMANDS = {
+  up: { numberOfParams: 0 },
+  cd: { numberOfParams: 1 },
+  ls: { numberOfParams: 0 },
+  cat: { numberOfParams: 1 },
+  add: { numberOfParams: 1 },
+  rn: { numberOfParams: 2 },
+  cp: { numberOfParams: 2 },
+  mv: { numberOfParams: 2 },
+  rm: { numberOfParams: 1 },
+  os: { numberOfParams: 1 },
+  hash: { numberOfParams: 1 },
+  compress: { numberOfParams: 2 },
+  decompress: { numberOfParams: 2 },
+  '.exit': { numberOfParams: 0 },
+};
