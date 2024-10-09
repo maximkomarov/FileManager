@@ -1,8 +1,14 @@
 import { createReadStream } from 'fs';
+import { directory } from '../directory.js';
+import path from 'path';
 
-export const cat = async (path) => {
+export const cat = async (pathToFile) => {
+  const dir = directory();
+
   return new Promise((resolve, reject) => {
-    const readableStream = createReadStream(path, { encoding: 'utf-8' });
+    const readableStream = createReadStream(path.resolve(dir, pathToFile), {
+      encoding: 'utf-8',
+    });
 
     readableStream.on('error', (error) => {
       reject(error);
