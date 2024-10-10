@@ -61,6 +61,6 @@ export const commandsHandler = async (command) => {
         console.log('Invalid command');
     }
   } catch (error) {
-    console.error('Operation failed');
+    console.log('Operation failed');
   }
 };
